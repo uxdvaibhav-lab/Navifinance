@@ -1,5 +1,5 @@
 import { ArrowLeft, TrendingUp, Coins, LineChart, Wallet } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 
 interface InvestmentDetailScreenProps {
   onBack: () => void;

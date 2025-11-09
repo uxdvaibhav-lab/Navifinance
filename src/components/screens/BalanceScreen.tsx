@@ -1,5 +1,5 @@
 import { ArrowLeft, Plus, TrendingUp, ArrowUpRight, ArrowDownLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { toast } from "sonner";
 
 interface BalanceScreenProps {

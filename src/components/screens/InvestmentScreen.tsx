@@ -1,5 +1,5 @@
 import { TrendingUp, Users, ChevronRight, Coins } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 
 interface InvestmentScreenProps {
   onFundClick: () => void;

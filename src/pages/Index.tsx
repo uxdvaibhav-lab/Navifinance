@@ -1,17 +1,17 @@
 import { useState } from "react";
-import Header from "@/components/Header";
-import BottomNav from "@/components/BottomNav";
-import UPIScreen from "@/components/screens/UPIScreen";
-import LoanScreen from "@/components/screens/LoanScreen";
-import InvestmentScreen from "@/components/screens/InvestmentScreen";
-import HealthScreen from "@/components/screens/HealthScreen";
-import ProfileDrawer from "@/components/ProfileDrawer";
-import FundDetailScreen from "@/components/screens/FundDetailScreen";
-import InvestmentDetailScreen from "@/components/screens/InvestmentDetailScreen";
-import TransactionHistoryScreen from "@/components/screens/TransactionHistoryScreen";
-import ScanPayDetailScreen from "@/components/screens/ScanPayDetailScreen";
-import PaymentScreen from "@/components/screens/PaymentScreen";
-import BalanceScreen from "@/components/screens/BalanceScreen";
+import Header from "../components/Header";
+import BottomNav from "../components/BottomNav";
+import UPIScreen from "../components/screens/UPIScreen";
+import LoanScreen from "../components/screens/LoanScreen";
+import InvestmentScreen from "../components/screens/InvestmentScreen";
+import HealthScreen from "../components/screens/HealthScreen";
+import ProfileDrawer from "../components/ProfileDrawer";
+import FundDetailScreen from "../components/screens/FundDetailScreen";
+import InvestmentDetailScreen from "../components/screens/InvestmentDetailScreen";
+import TransactionHistoryScreen from "../components/screens/TransactionHistoryScreen";
+import ScanPayDetailScreen from "../components/screens/ScanPayDetailScreen";
+import PaymentScreen from "../components/screens/PaymentScreen";
+import BalanceScreen from "../components/screens/BalanceScreen";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("upi");

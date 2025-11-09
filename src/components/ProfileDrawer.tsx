@@ -1,5 +1,5 @@
 import { X, User, QrCode, CreditCard, Coins, Settings, MessageCircle, ScrollText, FileText, Info, LogOut, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 
 interface ProfileDrawerProps {
   isOpen: boolean;

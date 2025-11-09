@@ -1,16 +1,16 @@
 import { Banknote, FileCheck, Zap, Calendar, Award, ChevronRight, MessageCircle, Users, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import testimonialAvatar from "@/assets/testimonial-avatar.jpg";
-import testimonialAvatar2 from "@/assets/testimonial-avatar-2.jpg";
-import testimonialAvatar3 from "@/assets/testimonial-avatar-3.jpg";
-import testimonialAvatar4 from "@/assets/testimonial-avatar-4.jpg";
+} from "../../components/ui/carousel";
+import testimonialAvatar from "../../assets/testimonial-avatar.jpg";
+import testimonialAvatar2 from "../../assets/testimonial-avatar-2.jpg";
+import testimonialAvatar3 from "../../assets/testimonial-avatar-3.jpg";
+import testimonialAvatar4 from "../../assets/testimonial-avatar-4.jpg";
 
 export default function LoanScreen() {
   const testimonials = [

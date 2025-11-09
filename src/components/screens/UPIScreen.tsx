@@ -1,5 +1,5 @@
 import { QrCode, Smartphone, History, Wallet, ScanLine, UserCircle, Send, ArrowLeftRight, Shield, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 
 interface UPIScreenProps {
   onHistoryClick?: () => void;

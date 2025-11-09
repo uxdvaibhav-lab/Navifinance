@@ -1,5 +1,5 @@
 import { Heart, Building2, Clock, Users, Shield, MessageCircle, ChevronRight, CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 
 export default function HealthScreen() {
   const hospitals = ["Apollo", "Fortis", "Max Healthcare", "Manipal"];

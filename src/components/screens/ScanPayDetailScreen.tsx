@@ -1,5 +1,5 @@
 import { ArrowLeft, ScanLine, QrCode, Camera, Upload, History } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { toast } from "sonner";
 import { useState } from "react";
 import {
@@ -8,7 +8,7 @@ import {
   AlertDialogDescription,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+} from "../../components/ui/alert-dialog";
 
 interface ScanPayDetailScreenProps {
   onBack: () => void;

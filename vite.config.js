@@ -2,6 +2,11 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: './',
   plugins: [react()],
-  base: '/navi-super-app-showcase-34423/',
+  server: {
+    host: true,
+    port: 5174,
+    open: true,
+  },
 })
