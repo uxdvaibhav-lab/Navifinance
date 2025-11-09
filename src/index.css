@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Navi Fintech Design System - iOS Photography Portfolio Style */
+
+@layer base {
+  :root {
+    /* 60% - DOMINANT NEUTRAL CANVAS */
+    --background: 0 0% 100%; /* Pure White */
+    --foreground: 0 0% 10%; /* Soft Black - Primary Typography */
+    
+    /* Card surfaces - Pure White */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    
+    /* Popover surfaces */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    
+    /* Neutral Typography & Borders */
+    --muted: 0 0% 97%; /* Very Light Grey - Dividers/Borders */
+    --muted-foreground: 0 0% 45%; /* Medium Grey - Secondary Typography */
+    --border: 0 0% 92%; /* Very Light Grey */
+    --input: 0 0% 92%;
+    
+    /* 30% - PRIMARY FUNCTIONAL (Deep Purple) */
+    --primary: 280 100% 24%; /* Deep Purple #4B007B - Primary CTA/Active */
+    --primary-foreground: 0 0% 100%;
+    --primary-structural: 280 100% 28%; /* Slightly darker purple #5B008C - Headers */
+    --primary-disabled: 280 20% 62%; /* Muted Mauve #A08DAF - Disabled states */
+    
+    /* Secondary uses neutral canvas */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+    
+    /* Accent uses primary purple */
+    --accent: 280 100% 24%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Ring color matches primary */
+    --ring: 280 100% 24%;
+    
+    /* 10% - ACCENT & STATUS COLORS */
+    --success: 150 68% 51%; /* Vibrant Green #29D980 - Brand Accent/Positive */
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 45 100% 50%; /* Refined Gold #FFC400 - Monetary/Rewards */
+    --warning-foreground: 0 0% 10%;
+    
+    --destructive: 0 69% 56%; /* Standard Red #E03E3E - Error/Negative */
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border radius */
+    --radius: 1rem;
+
+    /* Custom tokens */
+    --nav-bg: 0 0% 10%;
+    --card-ring: 0 0% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    @apply font-light tracking-tight;
+  }
+}
+
+/* Design System Utilities */
+@layer utilities {
+  /* Standardized Icon Sizes */
+  .icon-xs {
+    @apply w-4 h-4;
+  }
+  
+  .icon-sm {
+    @apply w-5 h-5;
+  }
+  
+  .icon-md {
+    @apply w-6 h-6;
+  }
+  
+  .icon-lg {
+    @apply w-8 h-8;
+  }
+  
+  .icon-xl {
+    @apply w-10 h-10;
+  }
+  
+  .icon-2xl {
+    @apply w-12 h-12;
+  }
+
+  /* Gradient Text Contrast Patterns */
+  .gradient-heading {
+    @apply text-white text-2xl font-light tracking-tight;
+  }
+  
+  .gradient-subheading {
+    @apply text-white/90 text-base font-semibold;
+  }
+  
+  .gradient-supporting {
+    @apply text-white/75 text-sm;
+  }
+  
+  .gradient-label {
+    @apply text-white/75 text-xs font-medium uppercase tracking-wide;
+  }
+
+  /* Standard Spacing Patterns */
+  .card-padding {
+    @apply p-5;
+  }
+  
+  .section-spacing {
+    @apply space-y-4;
+  }
+  
+  .icon-text-gap {
+    @apply gap-2;
+  }
+  
+  .card-gap {
+    @apply gap-3;
+  }
+  
+  .section-gap {
+    @apply gap-4;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-up {
+  animation: fade-slide-up 0.4s ease-out forwards;
+}
+
+/* Floating animation for device mockup */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Cursor ripple animation */
+@keyframes cursor-ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+}
+
+.cursor-click {
+  animation: cursor-ripple 0.4s ease-out;
+}
+
+/* Hide default cursor on desktop (only when custom cursor is active) */
+@media (hover: hover) and (pointer: fine) {
+  body, body * {
+    cursor: none !important;
+  }
+  
+  /* Ensure cursor is auto for touch devices */
+  @supports (cursor: none) {
+    body, body * {
+      cursor: none !important;
+    }
+  }
+}
+
+/* Minimal Scrollbar Styles */
+@layer utilities {
+  /* Hide scrollbar completely when needed */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Global minimal scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted));
+    border-radius: 20px;
+  }
+}
