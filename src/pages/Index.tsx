@@ -47,8 +47,6 @@ const Index = () => {
       return (
         <UPIScreen
           onHistoryClick={() => setShowTransactionHistory(true)}
-          onScanPayClick={() => setShowScanPayDetail(true)}
-          onBalanceClick={() => setShowBalanceScreen(true)}
           onMobilePayClick={() => {
             setPaymentMode("mobile");
             setShowPaymentScreen(true);
@@ -83,7 +81,7 @@ const Index = () => {
       case "health":
         return <HealthScreen />;
       default:
-        return <UPIScreen onHistoryClick={() => setShowTransactionHistory(true)} onScanPayClick={() => setShowScanPayDetail(true)} />;
+        return <UPIScreen onHistoryClick={() => setShowTransactionHistory(true)} />;
     }
   };
 

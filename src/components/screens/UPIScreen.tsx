@@ -40,18 +40,27 @@ export default function UPIScreen({ onHistoryClick, onScanPayClick, onBalanceCli
             <History className="icon-sm text-foreground" strokeWidth={1.5} />
             <span className="text-sm font-medium text-foreground">History</span>
           </button>
-          <button onClick={onBalanceClick} className="h-auto py-4 flex flex-col items-center icon-text-gap rounded-xl bg-muted ring-1 ring-border active:scale-[0.98] transition-all hover:ring-primary hover:shadow-sm cursor-pointer">
-            <Wallet className="icon-sm text-foreground" strokeWidth={1.5} />
-            <span className="text-sm font-medium text-foreground">UPI Lite</span>
-          </button>
-          <button onClick={onScanPayClick} className="col-span-2 h-auto py-4 flex flex-col items-center icon-text-gap rounded-xl bg-muted ring-1 ring-border active:scale-[0.98] transition-all hover:ring-primary hover:shadow-sm cursor-pointer">
-            <ScanLine className="icon-sm text-foreground" strokeWidth={1.5} />
-            <span className="text-sm font-medium text-foreground">Scan & Pay</span>
-          </button>
-          <button onClick={onBalanceClick} className="col-span-2 h-auto py-4 flex flex-col items-center icon-text-gap rounded-xl bg-muted ring-1 ring-border active:scale-[0.98] transition-all hover:ring-primary hover:shadow-sm cursor-pointer">
-            <Wallet className="icon-sm text-foreground" strokeWidth={1.5} />
-            <span className="text-sm font-medium text-foreground">Balance</span>
-          </button>
+            <button
+              onClick={onBalanceClick ? onBalanceClick : undefined}
+              className={"h-auto py-4 flex flex-col items-center icon-text-gap rounded-xl bg-muted ring-1 ring-border active:scale-[0.98] transition-all hover:ring-primary hover:shadow-sm" + (onBalanceClick ? " cursor-pointer" : " pointer-events-none opacity-50")}
+            >
+              <Wallet className="icon-sm text-foreground" strokeWidth={1.5} />
+              <span className="text-sm font-medium text-foreground">UPI Lite</span>
+            </button>
+            <button
+              onClick={onScanPayClick ? onScanPayClick : undefined}
+              className={"col-span-2 h-auto py-4 flex flex-col items-center icon-text-gap rounded-xl bg-muted ring-1 ring-border active:scale-[0.98] transition-all hover:ring-primary hover:shadow-sm" + (onScanPayClick ? " cursor-pointer" : " pointer-events-none opacity-50")}
+            >
+              <ScanLine className="icon-sm text-foreground" strokeWidth={1.5} />
+              <span className="text-sm font-medium text-foreground">Scan & Pay</span>
+            </button>
+            <button
+              onClick={onBalanceClick ? onBalanceClick : undefined}
+              className={"col-span-2 h-auto py-4 flex flex-col items-center icon-text-gap rounded-xl bg-muted ring-1 ring-border active:scale-[0.98] transition-all hover:ring-primary hover:shadow-sm" + (onBalanceClick ? " cursor-pointer" : " pointer-events-none opacity-50")}
+            >
+              <Wallet className="icon-sm text-foreground" strokeWidth={1.5} />
+              <span className="text-sm font-medium text-foreground">Balance</span>
+            </button>
         </div>
       </div>
 
