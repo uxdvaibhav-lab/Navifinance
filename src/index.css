@@ -239,3 +239,14 @@
     border-radius: 20px;
   }
 }
+
+/* Hide scrollbars for iframe embedding */
+html, body {
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
