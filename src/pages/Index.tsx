@@ -86,19 +86,21 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-100 pb-24">
-      {!isDetailScreen && <Header onProfileClick={() => setIsProfileOpen(true)} />}
-      
-      <main className="animate-in fade-in slide-in-from-bottom-2 duration-300">
-        {renderScreen()}
-      </main>
-      
-      <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
-      
-      <ProfileDrawer 
-        isOpen={isProfileOpen}
-        onClose={() => setIsProfileOpen(false)}
-      />
+    <div className="mockup-scroll">
+      <div className="min-h-screen bg-neutral-100 pb-24">
+        {!isDetailScreen && <Header onProfileClick={() => setIsProfileOpen(true)} />}
+        
+        <main className="animate-in fade-in slide-in-from-bottom-2 duration-300">
+          {renderScreen()}
+        </main>
+        
+        <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
+        
+        <ProfileDrawer 
+          isOpen={isProfileOpen}
+          onClose={() => setIsProfileOpen(false)}
+        />
+      </div>
     </div>
   );
 };
