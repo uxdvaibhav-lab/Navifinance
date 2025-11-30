@@ -240,10 +240,11 @@
   }
 }
 
-/* Hide scrollbars for iframe embedding */
+/* Hide scrollbars while retaining scroll functionality */
 html, body {
-  overflow: scroll;
+  overflow: auto;
   scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 html::-webkit-scrollbar,
